@@ -35,7 +35,8 @@ function Movie({ addToSavedList }) {
     // in the .then, update state with props.setItems and navigate to the shop
     axios.delete(`http://localhost:5000/api/movies/${match.params.id}`).then(res => {
       // res.data
-      setMovie(res.data);
+      console.log(res.data);
+     // setMovie(res.data);
       window.location = "http://localhost:3000/";
     //  history.push('/');
     });
