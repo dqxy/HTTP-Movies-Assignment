@@ -36,7 +36,8 @@ function Movie({ addToSavedList }) {
     axios.delete(`http://localhost:5000/api/movies/${match.params.id}`).then(res => {
       // res.data
       setMovie(res.data);
-      history.push('/');
+      window.location = "http://localhost:3000/";
+    //  history.push('/');
     });
   };
 
